@@ -1,5 +1,7 @@
-export default function posts(){
-return(
-    <h1 className="flex flex-col justify-center mt-20 ml-20">Lista de posts </h1>
-)
+import { getSortedPostsData } from "@/lib/posts"
+
+export default async function Posts() {
+    const allPosts = await getSortedPostsData()
+    console.log(allPosts)
+return <h1>Lista de posts </h1>
 }
